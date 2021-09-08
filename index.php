@@ -98,7 +98,7 @@ $products = $statement->fetchAll(PDO::FETCH_ASSOC);
               
 
                                       <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#exampleModal">
                       Launch demo modal
                     </button>
 
@@ -112,9 +112,21 @@ $products = $statement->fetchAll(PDO::FETCH_ASSOC);
                               <span aria-hidden="true">&times;</span>
                             </button>
                           </div>
-                          <div class="modal-body">
-                            ...
-                          </div>
+                          
+                          <form style="display: inline-block" action="delete.php" method="POST">
+                              <div class="modal-body">
+                              
+
+                                
+                                  <h3>Are you sure you want to delete course?</h3>
+                
+                
+                                  <input type="hidden" name="id" value="<?php echo $product["id"]; ?>">
+                                  <button type="submit" class="btn mt-5 btn-lg btn-danger delete-btn ">Yes</button>
+                                  <button type="button" class="btn mt-5 btn-lg btn-secondary" data-dismiss="modal">No</button>
+                              </div>
+                          </form>
+                          
                           <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                             <button type="button" class="btn btn-primary">Save changes</button>
@@ -130,19 +142,7 @@ $products = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 
 
-              <form style="display: inline-block" action="delete.php" method="POST">
-                              <div class="modal-body">
-                              
-
-                                
-                                  <h3>Are you sure you want to delete course?</h3>
-                
-                
-                                  <input type="hidden" name="id" value="<?php echo $product["id"]; ?>">
-                                  <button type="submit" class="btn mt-5 btn-lg btn-danger delete-btn ">Yes</button>
-                                  <button type="button" class="btn mt-5 btn-lg btn-secondary" data-dismiss="modal">No</button>
-                              </div>
-                </form>
+            
                 
               
           <?php endforeach; ?> 
