@@ -94,15 +94,25 @@ $products = $statement->fetchAll(PDO::FETCH_ASSOC);
                   
                     <a href="show.php?id=<?php echo $product["id"]; ?>" type="button" class="btn btn-success">Show</a>
                     <a href="update.php?id=<?php echo $product["id"]; ?>" type="button" class="btn btn-primary">Edit</a>
+                  
+                    <form style="display: inline-block" action="delete.php" method="POST">
+          
+                
+                
+                                  <input type="hidden" name="id" value="<?php echo $product["id"]; ?>">
+                                  <button type="submit" class="btn btn-danger delete-btn">Delete</button>
+                            
+                    </form>
+                  </td>
           
               
 
                                       <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    <!-- <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#exampleModal">
                       Launch demo modal
-                    </button>
+                    </button> -->
 
-                    <!-- Modal -->
+                    <!-- Modal
                     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                       <div class="modal-dialog" role="document">
                         <div class="modal-content">
@@ -122,7 +132,7 @@ $products = $statement->fetchAll(PDO::FETCH_ASSOC);
                 
                 
                                   <input type="hidden" name="id" value="<?php echo $product["id"]; ?>">
-                                  <button type="submit" class="btn mt-5 btn-lg btn-danger delete-btn ">Yes</button>
+                                  <button type="submit" class="btn mt-5 btn-lg btn-danger delete-btn">Yes</button>
                                   <button type="button" class="btn mt-5 btn-lg btn-secondary" data-dismiss="modal">No</button>
                               </div>
                           </form>
@@ -133,11 +143,11 @@ $products = $statement->fetchAll(PDO::FETCH_ASSOC);
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </div> -->
 
 
 
-                  </td>
+                  
               </tr>
 
 
@@ -153,6 +163,25 @@ $products = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 
 
+<!-- 
+    <script>
+
+    $(document).ready(function () {
+
+
+      $(".delete-btn").on("click", function() {
+
+
+        $("#delete-modal").modal("show");
+
+
+
+      });
+
+
+    });
+
+    </script> -->
 
 
 
