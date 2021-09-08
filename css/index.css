@@ -1,0 +1,26 @@
+.product-img {
+  width: 150px;
+  height: 150px;
+}
+
+.show-no-img-text,
+.show-no-desc-text {
+  font-size: 50px;
+}
+
+.show-title {
+  font-size: 70px;
+}
+
+.show-description {
+  font-size: 25px;
+}
+
+.create-form {
+  padding: 1000px;
+}
+
+.form {
+  width: 50%;
+  margin: auto;
+}
